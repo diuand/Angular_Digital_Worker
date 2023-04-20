@@ -1,0 +1,19 @@
+
+.bg_gray{
+  background-color: rgb(40, 40, 40);
+}
+.bg_gray_light{
+  background-color: rgb(36, 36, 36);
+}
+.text_red{
+  color:#ff0101;
+}
+.fs_title{
+  font-size: 2rem;
+}
+a{
+  color: white;
+}
+.text_gray_light{
+  color:rgb(78, 78, 78)
+}

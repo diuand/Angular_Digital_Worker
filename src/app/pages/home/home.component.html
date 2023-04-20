@@ -1,0 +1,254 @@
+<!-- fist page -->
+<div class="bg_gray text-white   d-flex align-items-center " style="height: 90vh;">
+  <div class="container d-flex align-items-center bg_gray py-md-5">
+    <div class="py-5"></div>
+    <div class="row">
+      <div class="col-12 mx-2 mx-md-0 col-md-7">
+        <div class="row">
+          <div class="col-12 text-start">
+            <h1 class="fs-1 text_red fw-bold">Hi i'm Andrei</h1>
+          </div>
+
+          <div class="col-12 col-md-10 col-xl-7 text-start">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia
+            nostrum facere, distinctio consequuntur eligendi iste qui fuga iusto
+            dolorum totam veniam, perferendis asperiores et, molestias quae eos
+            non velit quos?
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 d-none d-md-block">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/f/f0/White_Video-icon.png"
+          alt=""
+          class="img-fluid"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- skills -->
+<div class="bg_gray_light " style="padding-top: 10vh; padding-bottom: 10vh;">
+  <div class="row d-flex p-0 container-fluid m-0 text-light justify-content-center">
+    <div class="col-12 p-0 pb-5  text-center">
+      <h1 class="fw-bold text-center fs_title text-danger">SKILLS</h1>
+    </div>
+    <!-- tools -->
+    <div class="col-7 col-sm-3 text-center border border-danger col-xl-2 mx-2 mx-lg-4 mx-xl-5 bg-dark rounded-3">
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/4/48/Icon_Maintenance.svg"
+        alt=""
+        height="70px"
+        width="70px"
+        class="text-white m-4"
+      />
+      <h3 class="pt-2 border-bottom border-danger fs-4 pb-3 text-danger">Tools</h3>
+      <div class="mb-1">
+        <p class="pb-5 m-0   d-inline"  appHoberRedWhite>Github</p><br>
+      </div>
+      <div class="mb-1">
+        <p class="pb-5 m-0 d-inline" appHoberRedWhite>Chrome DevTools</p><br>
+      </div>
+      <div class="mb-1">
+        <p class="pb-5 m-0 d-inline" appHoberRedWhite>VScode</p><br>
+      </div>
+      <div class="mb-1">
+        <p class="pb-5 m-0 d-inline" appHoberRedWhite>Linux</p><br>
+      </div>
+      <div class="pb-2"></div>
+    </div>
+    <!-- languages -->
+    <div
+      class="col-7 text-center col-sm-3 mx-2 border border-danger  col-xl-2 mx-lg-4 mx-xl-5 my-4 my-sm-0 bg-dark rounded-3"
+    >
+    <img
+      src="https://upload.wikimedia.org/wikipedia/commons/4/48/Icon_Maintenance.svg"
+      alt=""
+      height="70px"
+      width="70px"
+      class="text-white m-4"
+    />
+      <h4 class="pt-2 border-bottom border-danger fs-4 pb-3 text-danger">Languages</h4>
+      <div class="mb-1">
+        <p class="pb-5 m-0 d-inline" appHoberRedWhite>Javascript</p><br>
+      </div>
+      <div class="mb-1">
+        <p class="pb-5 m-0 d-inline" appHoberRedWhite>Python</p><br>
+      </div>
+      <div class="mb-1">
+        <p class="pb-5 m-0 d-inline" appHoberRedWhite>C#</p><br>
+      </div>
+      <div class="pb-2"></div>
+    </div>
+
+    <!-- design -->
+    <div class="col-7 col-sm-3 col-xl-2 border border-danger  text-center mx-lg-4 mx-xl-5 mx-2 bg-dark rounded-3">
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/4/48/Icon_Maintenance.svg"
+        alt=""
+        height="70px"
+        width="70px"
+        class="text-white m-4"
+      />
+
+      <h4 class="pt-2 border-bottom border-danger fs-4 pb-3 text-danger">Design</h4>
+      <div class="mb-1">
+        <p class="pb-5 m-0 d-inline" appHoberRedWhite>Photoshop</p><br>
+      </div>
+      <div class="mb-1">
+        <p class="pb-5 m-0 d-inline" appHoberRedWhite>Figma</p><br>
+      </div>
+      <div class="mb-1">
+        <p class="pb-5 m-0 d-inline" appHoberRedWhite>Illustrator</p><br>
+      </div>
+      <div class="mb-1">
+        <p class="pb-5 m-0 d-inline" appHoberRedWhite>InDesign</p><br>
+      </div>
+      <div class="pb-2"></div>
+    </div>
+  </div>
+  <div class="pb-5"></div>
+</div>
+
+<!-- projects -->
+<div class="bg_gray text-white " style="padding-top: 10vh; padding-bottom: 10vh;">
+  <div class="container text-center">
+    <!-- title -->
+    <h1 class="fw-bold py-2 pb-5 fs_title text-danger text-center">PROJECTS</h1>
+    <!-- display projects -->
+    <div class="py-4" *ngFor="let project of projects ">
+      <div class="m-2 mt-0 pb-4 ">
+        <div class="row d-felx justify-content-center">
+          <!-- image -->
+          <div class="col-6 pb-3">
+            <img
+              class="rounded-3 img-fluid mt-3"
+              width="300"
+              alt="image"
+              [src]="project.url"
+            />
+          </div>
+          <!-- title + description + buttons -->
+          <div class="col-md-6 col-12 mt-3">
+
+            <!-- title -->
+            <h4 class="fw-bold pb-1 fs-2">{{project.title}}</h4>
+
+            <!-- description -->
+            <div class="mx-2 py-3">
+                <p>{{project.description}}</p>
+            </div>
+
+            <!-- buttons -->
+            <div class="row" >
+              <div class="col-6 d-flex justify-content-center"  >
+                <a
+                  class="text-decoration-none d-flex text-white ms-2"
+                  href="{{project.live_link}}"
+                >
+                  <div class="p-2" appHoverYellowWhite>
+                    <i class="bi bi-laptop h2 d-block" ></i> live link
+                  </div></a
+                >
+              </div>
+              <div class="col-6 d-flex justify-content-center">
+                <a
+                  class="text-decoration-none d-flex text-white ms-2"
+                  href="{{project.github}}"
+                >
+                  <div class="p-2" appHoverGrayWhite>
+                    <i class="bi h2 d-block bi-github"></i>Code
+                  </div></a
+                >
+              </div>
+
+              <div class="col-md-12 pt-3 d-flex justify-content-center border-bottom pb-4 ">
+                <button
+                  class="btn btn-success border-2 me-3"
+                  style="background-color: transparent;"
+                >
+                  Edit
+                </button>
+                <button
+                  (click)="OnDelete(project.id)"
+                  class="btn btn-danger border-2"
+                  style="background-color: transparent;"
+                >
+                  Delete
+                </button>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <br />
+      </div>
+    </div>
+  </div>
+  <div class="pb-5"></div>
+</div>
+
+<!-- footer -->
+<footer class="bg_gray_light text-white pt-5 pb-4">
+  <div class="container text-center text-md-start">
+    <div class="row text-md-start text-center">
+      <div class="col-md-3 mx-auto mt-3">
+        <h5 class="text-uppercase mb-4 fw-bold text_gray_light fs-5">Socials</h5>
+        <div class="my-2">
+          <a href="#" class="text-decoration-none my-5" appHoberRedWhite
+          ><i class="bi bi-github me-2"></i>Github</a
+        ><br />
+        </div>
+        <div class="my-2">
+          <a href="#" class="text-decoration-none my-5" appHoberRedWhite>
+            <i class="bi bi-linkedin me-2"></i>Linkedin</a
+          ><br />
+        </div>
+        <div class="my-2">
+          <a href="#" class="text-decoration-none my-5" appHoberRedWhite>
+            <i class="bi bi-instagram me-2"></i>Instagram</a
+          ><br />
+        </div>
+        <div class="my-2">
+          <a href="#" class="text-decoration-none my-5" appHoberRedWhite>
+            <i class="bi bi-facebook me-2"></i>Facebook</a
+          ><br />
+        </div>
+
+
+      </div>
+
+      <div class="col-md-4 mx-auto mt-4 mt-md-3">
+        <h5 class="text-uppercase mb-4 fw-bold text_gray_light fs-5">
+          Latest projects
+        </h5>
+        <div *ngFor="let project of projects" >
+          <div class="my-2">
+            <a [href]="project.github" class="text-decoration-none" style="color:white" appHoberRedWhite>{{project.title}}</a>
+          <br>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="col-md-4 col-lg-3 mx-auto mt-3">
+        <h5 class="text-uppercase mb-4 fw-bold text_gray_light fs-5">Contact</h5>
+        <div class="my-2">
+          <a href="#" class="text-decoration-none my-5" appHoberRedWhite
+          ><i class="bi me-2 bi-envelope-at" ></i>Mail</a
+        ><br />
+        </div>
+
+        <div class="my-2">
+          <a href="#" class="text-decoration-none my-5" appHoberRedWhite>
+            <i class="bi bi-whatsapp me-2"></i>Whatsapp</a
+          ><br />
+        </div>
+
+      </div>
+    </div>
+  </div>
+</footer>

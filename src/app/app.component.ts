@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { HeaderHeightService } from './Services/header-height.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Projects-Website';
+  title = 'store-website';
+  constructor(public header_height: HeaderHeightService) {}
 }

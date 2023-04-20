@@ -1,0 +1,30 @@
+/* logo */
+
+#logo :hover .logo_name {
+  animation: a 2.5s 1;
+  transition: fill ease
+}
+
+
+.logo_name {
+  fill: #ff0101;
+  stroke: #ff0101;
+  stroke-width: 4px;
+  stroke-dasharray: 1000px
+}
+
+@keyframes a {
+  0% {
+      stroke-dashoffset: 1000;
+      fill: transparent
+  }
+
+  50% {
+      stroke-dashoffset: 0;
+      fill: transparent
+  }
+
+  to {
+      fill: #ff0101;
+  }
+}

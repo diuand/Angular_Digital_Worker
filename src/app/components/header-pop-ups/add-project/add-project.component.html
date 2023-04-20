@@ -1,0 +1,104 @@
+
+
+<!-- display projects -->
+  <div class="m-2 mt-0 pb-4 d-md-block d-none ">
+    <!-- preview -->
+    <h1 class="text-danger text-center pt-4 fw-bold" style="font-size: 2rem;">Preview</h1>
+    <div class="row d-felx text-white justify-content-center">
+      <!-- image -->
+      <div class="col-4 pb-3">
+        <img
+          class="rounded-3  mt-3"
+          width="300px"
+          height="250px"
+          alt="image"
+          [src]="project_semple.url"
+        />
+      </div>
+      <!-- title + description + buttons -->
+      <div class="col-md-6 col-12 mt-3">
+
+        <!-- title -->
+        <h4 class="fw-bold pb-1 fs-2 text-white text-center">{{title}}</h4>
+
+        <!-- description -->
+        <div class="mx-2 py-3 text-white text-center">
+            <p>{{description}}</p>
+        </div>
+
+        <!-- buttons -->
+        <div class="row" >
+          <div class="col-6 d-flex justify-content-center"  >
+            <a
+              class="text-decoration-none d-flex text-white ms-2"
+              href="{{project_semple.live_link}}"
+            >
+              <div class="p-2" appHoverYellowWhite>
+                <i class="bi bi-laptop h2 d-block text-center" ></i> live link
+              </div></a
+            >
+          </div>
+          <div class="col-6 d-flex justify-content-center">
+            <a
+              class="text-decoration-none d-flex text-white ms-2"
+              href="{{project_semple.github}}"
+            >
+              <div class="p-2" appHoverGrayWhite>
+                <i class="bi h2 d-block bi-github text-center"></i>Code
+              </div></a
+            >
+          </div>
+
+          <div class="col-md-12 pt-3 d-flex justify-content-center border-bottom pb-4 ">
+            <button
+              class="btn btn-success border-2 me-3"
+              style="background-color: transparent;"
+            >
+              Edit
+            </button>
+            <button
+              class="btn btn-danger border-2"
+              style="background-color: transparent;"
+            >
+              Delete
+            </button>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <br />
+  </div>
+
+ <!-- input form -->
+<div class="container">
+<div class="row pt-5 pt-md-0">
+  <h1 class="text-white text-center d-md-none">Create a Project</h1>
+  <div class="col-12 my-2 my-md-0 col-md-4">
+    <input type="text" class="form-control border-danger border text-white" style="background-color: transparent;"placeholder="title" [(ngModel)]="title" />
+  </div>
+
+  <div class="col-12 my-2 my-md-0 col-md-4 ">
+    <input type="text" class="form-control border-danger border text-white" style="background-color: transparent;" placeholder="Live link" [(ngModel)]="live_link" />
+  </div>
+  <div class="col-12 col-md-4 my-2 my-md-0 mb-md-3">
+    <input type="file" accept="image/*" (change)="OnSelect($event)" style="display: none;" id="img"/>
+    <label for="img" class="text-white border-danger border p-2 rounded-2" type="button">Upload image</label>
+  </div>
+  <div class="col-12 my-2 my-md-0 col-md-4">
+    <input type="text" class="form-control border-danger border text-white" style="background-color: transparent;" placeholder="description" [(ngModel)]="description" />
+  </div>
+
+  <div class="col-12 my-2 my-md-0 col-md-4 ">
+    <input type="text" class="form-control border-danger border text-white" style="background-color: transparent;" placeholder="github" [(ngModel)]="github" />
+  </div>
+  <div class="col-12 col-md-8 my-2 my-md-0  pt-md-3 text-start">
+    <button class="btn btn-light text-white " style="background-color: transparent;" (click)="OnSubmit()">Submit</button>
+  </div>
+</div>
+
+
+
+</div>

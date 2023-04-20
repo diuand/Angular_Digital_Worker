@@ -1,0 +1,66 @@
+
+
+
+<div class="fixed-top" >
+
+
+
+  <!-- header logo and buttons -->
+  <div class=" bg_gray header   text-white" id="header">
+
+    <div class="py-3 d-flex  align-items-center justify-content-between">
+
+      <!-- logo and menu button -->
+      <div class="d-flex ms-md-3 align-items-center">
+
+        <!-- menu button -->
+        <mat-icon (click)="toggle_button(buttons[0])"
+                  [fontIcon]="buttons[0].icon"
+                  [appHighlight]="buttons[0].icon"
+                  appHoverOpacity9
+                  appButtonHeader
+                  class="mx-2 d-md-none fs-2 buton">
+        </mat-icon>
+
+        <!-- logo -->
+        <a routerLink="home">
+          <app-logo></app-logo>
+        </a>
+
+      </div>
+
+      <!-- header buttons -->
+      <div class="d-flex align-items-center">
+
+        <!-- account button -->
+        <mat-icon class="mx-4  buton"
+                  (click)="toggle_button(buttons[1])"
+                  [fontIcon]="buttons[1].icon"
+                  appButtonHeader [appHighlight]="buttons[1].icon"
+                  appHoverOpacity9
+        ></mat-icon>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- menu pop-up -->
+  <div class=" bg-light pup_up_animation vw-100 "
+      *ngIf="buttons[0].isOpen"
+      [ngStyle]="{'height.px': buttons[0].menu_height}">
+      <app-menu></app-menu>
+  </div>
+
+  <!-- add project pop-up -->
+  <div class="bg_gray_light vw-100 pup_up_animation"
+      *ngIf="buttons[1].isOpen"
+      [ngStyle]="{'height.px': buttons[1].menu_height}">
+      <app-add-project></app-add-project>
+  </div>
+</div>
+
+
