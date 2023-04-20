@@ -16,8 +16,8 @@ export class AddProjectComponent {
 
   project_semple = {
     id: 0,
-    title: this.title,
-    description: this.description,
+    title: "Angular",
+    description: 'A small description about the project',
     live_link: "https://www.google.ro/",
     github: "https://github.com/diuand",
     url:
@@ -34,6 +34,8 @@ export class AddProjectComponent {
         reader.readAsDataURL(this.image.target.files[0]);
         reader.onload = (event: any) => {
           this.project_semple.url = event.target.result
+          this.project_semple.title = this.title
+          this.project_semple.description = this.description
           console.log(this.project_semple.url )
           this.projectService.addProject({
             id: this.projects.length,
