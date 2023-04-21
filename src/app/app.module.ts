@@ -25,6 +25,7 @@ import { HoberRedWhiteDirective } from './Directives/hober-red-white.directive';
 import { HoverYellowWhiteDirective } from './Directives/hover-yellow-white.directive';
 import { HoverGrayWhiteDirective } from './Directives/hover-gray-white.directive';
 import { AddProjectComponent } from './components/header-pop-ups/add-project/add-project.component';
+import { EditComponentComponent } from './components/edit-component/edit-component.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { AddProjectComponent } from './components/header-pop-ups/add-project/add
     HoberRedWhiteDirective,
     HoverYellowWhiteDirective,
     HoverGrayWhiteDirective,
-    AddProjectComponent
+    AddProjectComponent,
+    EditComponentComponent
   ],
   imports: [
     FormsModule,

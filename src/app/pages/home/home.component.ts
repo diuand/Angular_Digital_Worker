@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { ProjectService } from 'src/app/Services/project.service';
 
 @Component({
@@ -7,7 +8,7 @@ import { ProjectService } from 'src/app/Services/project.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-  constructor(private projectService: ProjectService) {}
+  constructor(private projectService: ProjectService,private router: Router) {}
   title: string = "Hello JavaTpoint";
   description: string = "mini description";
   live_link: string = "test";
@@ -69,5 +70,8 @@ export class HomeComponent {
   }
   OnDelete(project_id:any) {
     this.projectService.removeProjectById(project_id);
+  }
+  goToEdit(id: number) {
+    this.router.navigate(["/edit", id]);
   }
 }
